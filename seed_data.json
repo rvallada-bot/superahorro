@@ -1,0 +1,858 @@
+{
+  "stores": [
+    {
+      "id": 1,
+      "name": "Jumbo Peñalolén",
+      "chain": "Jumbo",
+      "lat": -33.4754,
+      "lng": -70.5512,
+      "address": "Av. Consistorial 2100",
+      "brandColor": "text-green-600",
+      "bgBrand": "bg-green-50",
+      "logo": "Jumbo",
+      "commune": ""
+    },
+    {
+      "id": 2,
+      "name": "Lider Quilín",
+      "chain": "Lider",
+      "lat": -33.4875,
+      "lng": -70.5783,
+      "address": "Av. Américo Vespucio 3100",
+      "brandColor": "text-blue-600",
+      "bgBrand": "bg-blue-50",
+      "logo": "Lider",
+      "commune": ""
+    },
+    {
+      "id": 3,
+      "name": "Santa Isabel Grecia",
+      "chain": "Santa Isabel",
+      "lat": -33.4651,
+      "lng": -70.6012,
+      "address": "Av. Grecia 3311",
+      "brandColor": "text-red-600",
+      "bgBrand": "bg-red-50",
+      "logo": "Santa Isabel",
+      "commune": ""
+    },
+    {
+      "id": 4,
+      "name": "Jumbo Portal Ñuñoa",
+      "chain": "Jumbo",
+      "lat": -33.4682,
+      "lng": -70.6025,
+      "address": "Av. José Pedro Alessandri 1166",
+      "brandColor": "text-green-600",
+      "bgBrand": "bg-green-50",
+      "logo": "Jumbo",
+      "commune": ""
+    },
+    {
+      "id": 5,
+      "name": "Lider Express Macul",
+      "chain": "Lider",
+      "lat": -33.488,
+      "lng": -70.595,
+      "address": "Av. Macul 4500",
+      "brandColor": "text-blue-600",
+      "bgBrand": "bg-blue-50",
+      "logo": "Lider",
+      "commune": ""
+    },
+    {
+      "id": 6,
+      "name": "Jumbo Costanera Center",
+      "chain": "Jumbo",
+      "lat": -33.4175,
+      "lng": -70.6065,
+      "address": "Av. Andrés Bello 2425, Providencia",
+      "brandColor": "text-green-600",
+      "bgBrand": "bg-green-50",
+      "logo": "Jumbo",
+      "commune": "Providencia"
+    },
+    {
+      "id": 7,
+      "name": "Jumbo Alto Las Condes",
+      "chain": "Jumbo",
+      "lat": -33.3905,
+      "lng": -70.5462,
+      "address": "Av. Kennedy 9001, Las Condes",
+      "brandColor": "text-green-600",
+      "bgBrand": "bg-green-50",
+      "logo": "Jumbo",
+      "commune": "Las Condes"
+    },
+    {
+      "id": 8,
+      "name": "Jumbo Francisco Bilbao",
+      "chain": "Jumbo",
+      "lat": -33.4332,
+      "lng": -70.5794,
+      "address": "Av. Francisco Bilbao 4144, Las Condes",
+      "brandColor": "text-green-600",
+      "bgBrand": "bg-green-50",
+      "logo": "Jumbo",
+      "commune": "Las Condes"
+    },
+    {
+      "id": 9,
+      "name": "Jumbo Los Dominicos",
+      "chain": "Jumbo",
+      "lat": -33.4124,
+      "lng": -70.5422,
+      "address": "Av. Camino El Alba 11969, Las Condes",
+      "brandColor": "text-green-600",
+      "bgBrand": "bg-green-50",
+      "logo": "Jumbo",
+      "commune": "Las Condes"
+    },
+    {
+      "id": 10,
+      "name": "Jumbo La Dehesa",
+      "chain": "Jumbo",
+      "lat": -33.3592,
+      "lng": -70.5165,
+      "address": "Av. El Juez Águila 1430, Lo Barnechea",
+      "brandColor": "text-green-600",
+      "bgBrand": "bg-green-50",
+      "logo": "Jumbo",
+      "commune": "Lo Barnechea"
+    },
+    {
+      "id": 11,
+      "name": "Jumbo Los Trapenses",
+      "chain": "Jumbo",
+      "lat": -33.3444,
+      "lng": -70.5284,
+      "address": "Av. José Alcalde Délano 10492, Lo Barnechea",
+      "brandColor": "text-green-600",
+      "bgBrand": "bg-green-50",
+      "logo": "Jumbo",
+      "commune": "Lo Barnechea"
+    },
+    {
+      "id": 12,
+      "name": "Jumbo Lo Castillo",
+      "chain": "Jumbo",
+      "lat": -33.4027,
+      "lng": -70.5947,
+      "address": "Eduardo Marquina 3942, Vitacura",
+      "brandColor": "text-green-600",
+      "bgBrand": "bg-green-50",
+      "logo": "Jumbo",
+      "commune": "Vitacura"
+    },
+    {
+      "id": 13,
+      "name": "Jumbo Latadia",
+      "chain": "Jumbo",
+      "lat": -33.4208,
+      "lng": -70.5694,
+      "address": "Av. Mariano Sánchez Fontecilla 12000, La Reina / Peñalolén",
+      "brandColor": "text-green-600",
+      "bgBrand": "bg-green-50",
+      "logo": "Jumbo",
+      "commune": "La Reina / Peñalolén"
+    },
+    {
+      "id": 14,
+      "name": "Jumbo Independencia",
+      "chain": "Jumbo",
+      "lat": -33.4243,
+      "lng": -70.6541,
+      "address": "Av. Independencia 565, Independencia",
+      "brandColor": "text-green-600",
+      "bgBrand": "bg-green-50",
+      "logo": "Jumbo",
+      "commune": "Independencia"
+    },
+    {
+      "id": 15,
+      "name": "Jumbo El Llano",
+      "chain": "Jumbo",
+      "lat": -33.4862,
+      "lng": -70.6521,
+      "address": "El Llano Subercaseaux 3519, San Miguel",
+      "brandColor": "text-green-600",
+      "bgBrand": "bg-green-50",
+      "logo": "Jumbo",
+      "commune": "San Miguel"
+    },
+    {
+      "id": 16,
+      "name": "Jumbo Florida Center",
+      "chain": "Jumbo",
+      "lat": -33.5132,
+      "lng": -70.6094,
+      "address": "Av. Vicuña Mackenna 6100, La Florida",
+      "brandColor": "text-green-600",
+      "bgBrand": "bg-green-50",
+      "logo": "Jumbo",
+      "commune": "La Florida"
+    },
+    {
+      "id": 17,
+      "name": "Jumbo Concha y Toro",
+      "chain": "Jumbo",
+      "lat": -33.5976,
+      "lng": -70.5786,
+      "address": "Av. Concha y Toro 3854, Puente Alto",
+      "brandColor": "text-green-600",
+      "bgBrand": "bg-green-50",
+      "logo": "Jumbo",
+      "commune": "Puente Alto"
+    },
+    {
+      "id": 18,
+      "name": "Jumbo Pajaritos",
+      "chain": "Jumbo",
+      "lat": -33.4835,
+      "lng": -70.7492,
+      "address": "Av. Los Pajaritos 3302, Maipú",
+      "brandColor": "text-green-600",
+      "bgBrand": "bg-green-50",
+      "logo": "Jumbo",
+      "commune": "Maipú"
+    },
+    {
+      "id": 19,
+      "name": "Lider Express Bandera",
+      "chain": "Lider",
+      "lat": -33.4391,
+      "lng": -70.6515,
+      "address": "Bandera 814, Santiago Centro",
+      "brandColor": "text-blue-600",
+      "bgBrand": "bg-blue-50",
+      "logo": "Lider",
+      "commune": "Santiago Centro"
+    },
+    {
+      "id": 20,
+      "name": "Lider Express Santo Domingo",
+      "chain": "Lider",
+      "lat": -33.4368,
+      "lng": -70.6548,
+      "address": "Santo Domingo 1031, Santiago Centro",
+      "brandColor": "text-blue-600",
+      "bgBrand": "bg-blue-50",
+      "logo": "Lider",
+      "commune": "Santiago Centro"
+    },
+    {
+      "id": 21,
+      "name": "Lider Express Santa Rosa",
+      "chain": "Lider",
+      "lat": -33.4431,
+      "lng": -70.6482,
+      "address": "Av. Santa Rosa 115, Santiago Centro",
+      "brandColor": "text-blue-600",
+      "bgBrand": "bg-blue-50",
+      "logo": "Lider",
+      "commune": "Santiago Centro"
+    },
+    {
+      "id": 22,
+      "name": "Lider Matucana (Hiper)",
+      "chain": "Lider",
+      "lat": -33.4323,
+      "lng": -70.6811,
+      "address": "Matucana 1202, Quinta Normal",
+      "brandColor": "text-blue-600",
+      "bgBrand": "bg-blue-50",
+      "logo": "Lider",
+      "commune": "Quinta Normal"
+    },
+    {
+      "id": 23,
+      "name": "Lider Alameda (Hiper)",
+      "chain": "Lider",
+      "lat": -33.4521,
+      "lng": -70.6789,
+      "address": "Av. Padre Alberto Hurtado 060, Estación Central",
+      "brandColor": "text-blue-600",
+      "bgBrand": "bg-blue-50",
+      "logo": "Lider",
+      "commune": "Estación Central"
+    },
+    {
+      "id": 24,
+      "name": "Lider Irarrázaval (Hiper)",
+      "chain": "Lider",
+      "lat": -33.4535,
+      "lng": -70.5752,
+      "address": "Av. Irarrázaval 2928, Ñuñoa",
+      "brandColor": "text-blue-600",
+      "bgBrand": "bg-blue-50",
+      "logo": "Lider",
+      "commune": "Ñuñoa"
+    },
+    {
+      "id": 25,
+      "name": "Lider Express Plaza Egaña",
+      "chain": "Lider",
+      "lat": -33.453,
+      "lng": -70.5701,
+      "address": "Av. Irarrázaval 5353, Ñuñoa",
+      "brandColor": "text-blue-600",
+      "bgBrand": "bg-blue-50",
+      "logo": "Lider",
+      "commune": "Ñuñoa"
+    },
+    {
+      "id": 26,
+      "name": "Lider Express Las Condes",
+      "chain": "Lider",
+      "lat": -33.3934,
+      "lng": -70.5463,
+      "address": "Av. Las Condes 10295, Las Condes",
+      "brandColor": "text-blue-600",
+      "bgBrand": "bg-blue-50",
+      "logo": "Lider",
+      "commune": "Las Condes"
+    },
+    {
+      "id": 27,
+      "name": "Lider Express Pedro de Valdivia",
+      "chain": "Lider",
+      "lat": -33.4418,
+      "lng": -70.6105,
+      "address": "Pedro de Valdivia 1885, Providencia",
+      "brandColor": "text-blue-600",
+      "bgBrand": "bg-blue-50",
+      "logo": "Lider",
+      "commune": "Providencia"
+    },
+    {
+      "id": 28,
+      "name": "Lider San Miguel",
+      "chain": "Lider",
+      "lat": -33.5042,
+      "lng": -70.6558,
+      "address": "Gran Avenida José Miguel Carrera 6150, San Miguel",
+      "brandColor": "text-blue-600",
+      "bgBrand": "bg-blue-50",
+      "logo": "Lider",
+      "commune": "San Miguel"
+    },
+    {
+      "id": 29,
+      "name": "Lider Vicuña Mackenna",
+      "chain": "Lider",
+      "lat": -33.5189,
+      "lng": -70.5986,
+      "address": "Av. Vicuña Mackenna 7196, La Florida",
+      "brandColor": "text-blue-600",
+      "bgBrand": "bg-blue-50",
+      "logo": "Lider",
+      "commune": "La Florida"
+    },
+    {
+      "id": 30,
+      "name": "Santa Isabel Moneda",
+      "chain": "Santa Isabel",
+      "lat": -33.4435,
+      "lng": -70.6554,
+      "address": "Moneda 1190, Santiago Centro",
+      "brandColor": "text-red-600",
+      "bgBrand": "bg-red-50",
+      "logo": "Santa Isabel",
+      "commune": "Santiago Centro"
+    },
+    {
+      "id": 31,
+      "name": "Santa Isabel Huérfanos",
+      "chain": "Santa Isabel",
+      "lat": -33.4398,
+      "lng": -70.6575,
+      "address": "Huérfanos 1400, Santiago Centro",
+      "brandColor": "text-red-600",
+      "bgBrand": "bg-red-50",
+      "logo": "Santa Isabel",
+      "commune": "Santiago Centro"
+    },
+    {
+      "id": 32,
+      "name": "Santa Isabel Merced",
+      "chain": "Santa Isabel",
+      "lat": -33.4379,
+      "lng": -70.6453,
+      "address": "Merced 545, Santiago Centro",
+      "brandColor": "text-red-600",
+      "bgBrand": "bg-red-50",
+      "logo": "Santa Isabel",
+      "commune": "Santiago Centro"
+    },
+    {
+      "id": 33,
+      "name": "Santa Isabel Portugal",
+      "chain": "Santa Isabel",
+      "lat": -33.4449,
+      "lng": -70.6385,
+      "address": "Av. Portugal 172, Santiago Centro",
+      "brandColor": "text-red-600",
+      "bgBrand": "bg-red-50",
+      "logo": "Santa Isabel",
+      "commune": "Santiago Centro"
+    },
+    {
+      "id": 34,
+      "name": "Santa Isabel Providencia",
+      "chain": "Santa Isabel",
+      "lat": -33.4331,
+      "lng": -70.6186,
+      "address": "Av. Providencia 1336, Providencia",
+      "brandColor": "text-red-600",
+      "bgBrand": "bg-red-50",
+      "logo": "Santa Isabel",
+      "commune": "Providencia"
+    },
+    {
+      "id": 35,
+      "name": "Santa Isabel Tobalaba",
+      "chain": "Santa Isabel",
+      "lat": -33.4478,
+      "lng": -70.5564,
+      "address": "Av. Tobalaba 12113, La Reina",
+      "brandColor": "text-red-600",
+      "bgBrand": "bg-red-50",
+      "logo": "Santa Isabel",
+      "commune": "La Reina"
+    },
+    {
+      "id": 36,
+      "name": "Santa Isabel Vitacura",
+      "chain": "Santa Isabel",
+      "lat": -33.4072,
+      "lng": -70.5971,
+      "address": "Av. Vitacura 3585, Vitacura",
+      "brandColor": "text-red-600",
+      "bgBrand": "bg-red-50",
+      "logo": "Santa Isabel",
+      "commune": "Vitacura"
+    },
+    {
+      "id": 37,
+      "name": "Santa Isabel Cristóbal Colón",
+      "chain": "Santa Isabel",
+      "lat": -33.4201,
+      "lng": -70.5699,
+      "address": "Av. Cristóbal Colón 5421, Las Condes",
+      "brandColor": "text-red-600",
+      "bgBrand": "bg-red-50",
+      "logo": "Santa Isabel",
+      "commune": "Las Condes"
+    },
+    {
+      "id": 38,
+      "name": "Santa Isabel Plaza Egaña",
+      "chain": "Santa Isabel",
+      "lat": -33.4542,
+      "lng": -70.5638,
+      "address": "Av. Larraín 5862, La Reina",
+      "brandColor": "text-red-600",
+      "bgBrand": "bg-red-50",
+      "logo": "Santa Isabel",
+      "commune": "La Reina"
+    },
+    {
+      "id": 39,
+      "name": "Santa Isabel Vicuña Mackenna",
+      "chain": "Santa Isabel",
+      "lat": -33.4795,
+      "lng": -70.6221,
+      "address": "Av. Vicuña Mackenna 2340, Macul",
+      "brandColor": "text-red-600",
+      "bgBrand": "bg-red-50",
+      "logo": "Santa Isabel",
+      "commune": "Macul"
+    },
+    {
+      "id": 40,
+      "name": "Santa Isabel Gran Avenida",
+      "chain": "Santa Isabel",
+      "lat": -33.4912,
+      "lng": -70.6534,
+      "address": "Gran Avenida 4350, San Miguel",
+      "brandColor": "text-red-600",
+      "bgBrand": "bg-red-50",
+      "logo": "Santa Isabel",
+      "commune": "San Miguel"
+    },
+    {
+      "id": 41,
+      "name": "Unimarc Portugal",
+      "chain": "Unimarc",
+      "lat": -33.4475,
+      "lng": -70.638,
+      "address": "Av. Portugal 452",
+      "brandColor": "text-amber-700",
+      "bgBrand": "bg-amber-50",
+      "logo": "U",
+      "commune": ""
+    },
+    {
+      "id": 42,
+      "name": "Unimarc Miraflores",
+      "chain": "Unimarc",
+      "lat": -33.4382,
+      "lng": -70.6468,
+      "address": "Miraflores 302",
+      "brandColor": "text-amber-700",
+      "bgBrand": "bg-amber-50",
+      "logo": "U",
+      "commune": ""
+    },
+    {
+      "id": 43,
+      "name": "Unimarc San Isidro",
+      "chain": "Unimarc",
+      "lat": -33.4498,
+      "lng": -70.646,
+      "address": "San Isidro 462",
+      "brandColor": "text-amber-700",
+      "bgBrand": "bg-amber-50",
+      "logo": "U",
+      "commune": ""
+    },
+    {
+      "id": 44,
+      "name": "Unimarc Catedral",
+      "chain": "Unimarc",
+      "lat": -33.4371,
+      "lng": -70.6582,
+      "address": "Catedral 1410",
+      "brandColor": "text-amber-700",
+      "bgBrand": "bg-amber-50",
+      "logo": "U",
+      "commune": ""
+    },
+    {
+      "id": 45,
+      "name": "Unimarc Tobalaba",
+      "chain": "Unimarc",
+      "lat": -33.4281,
+      "lng": -70.6015,
+      "address": "Av. Tobalaba 1185, Providencia",
+      "brandColor": "text-amber-700",
+      "bgBrand": "bg-amber-50",
+      "logo": "U",
+      "commune": "Providencia"
+    },
+    {
+      "id": 46,
+      "name": "Unimarc Bilbao",
+      "chain": "Unimarc",
+      "lat": -33.4345,
+      "lng": -70.5842,
+      "address": "Av. Francisco Bilbao 2890, Providencia",
+      "brandColor": "text-amber-700",
+      "bgBrand": "bg-amber-50",
+      "logo": "U",
+      "commune": "Providencia"
+    },
+    {
+      "id": 47,
+      "name": "Unimarc Manquehue",
+      "chain": "Unimarc",
+      "lat": -33.4112,
+      "lng": -70.5658,
+      "address": "Av. Manquehue Sur 320, Las Condes",
+      "brandColor": "text-amber-700",
+      "bgBrand": "bg-amber-50",
+      "logo": "U",
+      "commune": "Las Condes"
+    },
+    {
+      "id": 48,
+      "name": "Unimarc Los Militares",
+      "chain": "Unimarc",
+      "lat": -33.4045,
+      "lng": -70.5731,
+      "address": "Los Militares 5925, Las Condes",
+      "brandColor": "text-amber-700",
+      "bgBrand": "bg-amber-50",
+      "logo": "U",
+      "commune": "Las Condes"
+    },
+    {
+      "id": 49,
+      "name": "Unimarc Santa María",
+      "chain": "Unimarc",
+      "lat": -33.3791,
+      "lng": -70.5895,
+      "address": "Av. Santa María 6950, Vitacura",
+      "brandColor": "text-amber-700",
+      "bgBrand": "bg-amber-50",
+      "logo": "U",
+      "commune": "Vitacura"
+    },
+    {
+      "id": 50,
+      "name": "Unimarc Plaza Egaña",
+      "chain": "Unimarc",
+      "lat": -33.4525,
+      "lng": -70.5685,
+      "address": "Av. Larraín 5961, La Reina",
+      "brandColor": "text-amber-700",
+      "bgBrand": "bg-amber-50",
+      "logo": "U",
+      "commune": "La Reina"
+    },
+    {
+      "id": 51,
+      "name": "Unimarc Irarrázaval",
+      "chain": "Unimarc",
+      "lat": -33.4542,
+      "lng": -70.596,
+      "address": "Av. Irarrázaval 1271, Ñuñoa",
+      "brandColor": "text-amber-700",
+      "bgBrand": "bg-amber-50",
+      "logo": "U",
+      "commune": "Ñuñoa"
+    },
+    {
+      "id": 52,
+      "name": "Unimarc Pedro de Valdivia",
+      "chain": "Unimarc",
+      "lat": -33.4611,
+      "lng": -70.6087,
+      "address": "Av. Pedro de Valdivia 3365, Ñuñoa",
+      "brandColor": "text-amber-700",
+      "bgBrand": "bg-amber-50",
+      "logo": "U",
+      "commune": "Ñuñoa"
+    },
+    {
+      "id": 53,
+      "name": "Unimarc El Llano",
+      "chain": "Unimarc",
+      "lat": -33.4839,
+      "lng": -70.6528,
+      "address": "El Llano Subercaseaux 2985, San Miguel",
+      "brandColor": "text-amber-700",
+      "bgBrand": "bg-amber-50",
+      "logo": "U",
+      "commune": "San Miguel"
+    },
+    {
+      "id": 54,
+      "name": "Unimarc Rojas Magallanes",
+      "chain": "Unimarc",
+      "lat": -33.5322,
+      "lng": -70.588,
+      "address": "Av. Rojas Magallanes 1880, La Florida",
+      "brandColor": "text-amber-700",
+      "bgBrand": "bg-amber-50",
+      "logo": "U",
+      "commune": "La Florida"
+    },
+    {
+      "id": 55,
+      "name": "Unimarc Pajaritos",
+      "chain": "Unimarc",
+      "lat": -33.4985,
+      "lng": -70.7562,
+      "address": "Av. Los Pajaritos 4301, Maipú",
+      "brandColor": "text-amber-700",
+      "bgBrand": "bg-amber-50",
+      "logo": "U",
+      "commune": "Maipú"
+    }
+  ],
+  "products": [
+    {
+      "id": 101,
+      "name": "Leche Entera Larga Vida 1L",
+      "brand": "Soprole",
+      "category": "Lácteos",
+      "img": "https://placehold.co/200x200/f8fafc/334155?text=Leche\nSoprole",
+      "unit": ""
+    },
+    {
+      "id": 102,
+      "name": "Coca-Cola Original 2.5L",
+      "brand": "Coca-Cola",
+      "category": "Bebidas",
+      "img": "https://placehold.co/200x200/fef2f2/991b1b?text=Coca\nCola",
+      "unit": ""
+    },
+    {
+      "id": 103,
+      "name": "Pan Marraqueta 1 kg",
+      "brand": "Genérico",
+      "category": "Panadería",
+      "img": "https://placehold.co/200x200/fffbeb/b45309?text=Pan\nMarraqueta",
+      "unit": ""
+    },
+    {
+      "id": 104,
+      "name": "Arroz Grano Largo 1 kg",
+      "brand": "Tucapel",
+      "category": "Abarrotes",
+      "img": "https://placehold.co/200x200/f0fdf4/166534?text=Arroz\nTucapel",
+      "unit": ""
+    },
+    {
+      "id": 105,
+      "name": "Aceite de Maravilla 1L",
+      "brand": "Chef",
+      "category": "Abarrotes",
+      "img": "https://placehold.co/200x200/fefce8/a16207?text=Aceite\nChef",
+      "unit": ""
+    }
+  ],
+  "prices": [
+    {
+      "store_id": 1,
+      "product_id": 101,
+      "price": 950,
+      "stock": true
+    },
+    {
+      "store_id": 2,
+      "product_id": 101,
+      "price": 920,
+      "stock": true
+    },
+    {
+      "store_id": 3,
+      "product_id": 101,
+      "price": 890,
+      "stock": true
+    },
+    {
+      "store_id": 4,
+      "product_id": 101,
+      "price": 950,
+      "stock": false
+    },
+    {
+      "store_id": 5,
+      "product_id": 101,
+      "price": 930,
+      "stock": true
+    },
+    {
+      "store_id": 1,
+      "product_id": 102,
+      "price": 2150,
+      "stock": true
+    },
+    {
+      "store_id": 2,
+      "product_id": 102,
+      "price": 1990,
+      "stock": true
+    },
+    {
+      "store_id": 3,
+      "product_id": 102,
+      "price": 2200,
+      "stock": true
+    },
+    {
+      "store_id": 4,
+      "product_id": 102,
+      "price": 2150,
+      "stock": true
+    },
+    {
+      "store_id": 5,
+      "product_id": 102,
+      "price": 2050,
+      "stock": true
+    },
+    {
+      "store_id": 1,
+      "product_id": 103,
+      "price": 2190,
+      "stock": true
+    },
+    {
+      "store_id": 2,
+      "product_id": 103,
+      "price": 1950,
+      "stock": true
+    },
+    {
+      "store_id": 3,
+      "product_id": 103,
+      "price": 1890,
+      "stock": true
+    },
+    {
+      "store_id": 4,
+      "product_id": 103,
+      "price": 2190,
+      "stock": true
+    },
+    {
+      "store_id": 5,
+      "product_id": 103,
+      "price": 1990,
+      "stock": false
+    },
+    {
+      "store_id": 1,
+      "product_id": 104,
+      "price": 1590,
+      "stock": true
+    },
+    {
+      "store_id": 2,
+      "product_id": 104,
+      "price": 1450,
+      "stock": true
+    },
+    {
+      "store_id": 3,
+      "product_id": 104,
+      "price": 1650,
+      "stock": true
+    },
+    {
+      "store_id": 4,
+      "product_id": 104,
+      "price": 1590,
+      "stock": true
+    },
+    {
+      "store_id": 5,
+      "product_id": 104,
+      "price": 1490,
+      "stock": true
+    },
+    {
+      "store_id": 1,
+      "product_id": 105,
+      "price": 2890,
+      "stock": true
+    },
+    {
+      "store_id": 2,
+      "product_id": 105,
+      "price": 2690,
+      "stock": true
+    },
+    {
+      "store_id": 3,
+      "product_id": 105,
+      "price": 2590,
+      "stock": true
+    },
+    {
+      "store_id": 4,
+      "product_id": 105,
+      "price": 2890,
+      "stock": true
+    },
+    {
+      "store_id": 5,
+      "product_id": 105,
+      "price": 2750,
+      "stock": true
+    }
+  ]
+}

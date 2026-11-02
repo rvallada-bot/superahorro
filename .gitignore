@@ -1,0 +1,5 @@
+scripts/basemaps-config.js
+__pycache__/
+superahorro.db
+superahorro.db-shm
+superahorro.db-wal

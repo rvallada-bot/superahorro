@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#047857">
+    <title>Iniciar sesión | SuperAhorro</title>
+    <link rel="stylesheet" href="./login.css">
+    <script src="./scripts/login.js" defer></script>
+</head>
+<body>
+    <main class="login-layout">
+        <section class="login-card" aria-labelledby="login-title">
+            <a class="brand" href="./login.html" aria-label="SuperAhorro, inicio">
+                <span class="brand-icon" aria-hidden="true">S</span>
+                <span>Super<span class="brand-accent">Ahorro</span></span>
+            </a>
+            <p class="eyebrow">Compara precios, compra mejor</p>
+            <h1 id="login-title">Bienvenido</h1>
+            <p id="login-intro" class="intro">Inicia sesión para comparar productos y supermercados cerca de ti.</p>
+
+            <form id="login-form">
+                <label for="email">Correo electrónico</label>
+                <input id="email" name="email" type="email" autocomplete="username" placeholder="tu@correo.cl" maxlength="254" required>
+
+                <label for="password">Contraseña</label>
+                <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Ingresa tu contraseña" required>
+
+                <p id="login-message" class="message" role="alert" aria-live="polite"></p>
+                <button id="submit-button" type="submit">Iniciar sesión</button>
+                <p class="mode-switch">¿No tienes una cuenta? <button id="show-register" class="text-button" type="button">Regístrate</button></p>
+                <p class="demo-note">Para probar: <strong>demo@superahorro.cl</strong><br>Contraseña: <strong>AhorroDemo2026!</strong></p>
+            </form>
+
+            <form id="register-form" hidden>
+                <label for="register-name">Nombre completo</label>
+                <input id="register-name" name="name" type="text" autocomplete="name" placeholder="Tu nombre" maxlength="120" required>
+
+                <label for="register-address">Dirección</label>
+                <input id="register-address" name="address" type="text" autocomplete="street-address" placeholder="Calle y número" maxlength="240" required>
+
+                <label for="register-commune">Comuna</label>
+                <input id="register-commune" name="commune" type="text" autocomplete="address-level2" placeholder="Ej: Ñuñoa" maxlength="120" required>
+
+                <label for="register-phone">Teléfono</label>
+                <input id="register-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+56 9 1234 5678" maxlength="40" required>
+
+                <label for="register-email">Correo electrónico</label>
+                <input id="register-email" name="email" type="email" autocomplete="email" placeholder="tu@correo.cl" maxlength="254" required>
+
+                <label for="register-password">Contraseña (mínimo 12 caracteres)</label>
+                <input id="register-password" name="password" type="password" autocomplete="new-password" minlength="12" maxlength="1024" required>
+
+                <p id="register-message" class="message" role="alert" aria-live="polite"></p>
+                <button id="register-button" type="submit">Crear cuenta</button>
+                <p class="mode-switch">¿Ya tienes una cuenta? <button id="show-login" class="text-button" type="button">Inicia sesión</button></p>
+            </form>
+
+            <p class="privacy-note">Tus datos de perfil se guardan en la base de SuperAhorro. Tu contraseña se almacena protegida.</p>
+        </section>
+        <aside class="login-aside" aria-label="Información de SuperAhorro">
+            <div class="basket" aria-hidden="true">🛒</div>
+            <p class="aside-label">Tu compra, más inteligente</p>
+            <h2>Encuentra mejores precios en tu zona.</h2>
+            <p>Revisa supermercados en el mapa y compara precios para planificar tu próxima compra.</p>
+        </aside>
+    </main>
+</body>
+</html>

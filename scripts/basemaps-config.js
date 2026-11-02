@@ -1,0 +1,1 @@
+window.CARTO_BASEMAPS_API_KEY = 'cb1_4tb3_1_7c23b612143d4aafa48d2d6b';

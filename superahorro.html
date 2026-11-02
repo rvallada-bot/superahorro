@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperAhorro - Compara y Ahorra en Supermercados</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./scripts/tailwind-config.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./superahorro.css">
+
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans h-screen flex flex-col overflow-hidden">
+
+    <!-- Navbar -->
+    <header class="bg-white shadow-sm z-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-2 cursor-pointer" onclick="resetView()">
+                <div class="bg-primary text-white p-2 rounded-lg">
+                    <i class="fa-solid fa-basket-shopping text-xl"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-gray-900 tracking-tight">Super<span class="text-primary">Ahorro</span></h1>
+            </div>
+
+            <!-- Location Selector -->
+            <div class="hidden md:flex items-center bg-gray-100 rounded-full px-4 py-2 border border-gray-200">
+                <i class="fa-solid fa-location-dot text-gray-500 mr-2"></i>
+                <select id="commune-selector" class="bg-transparent border-none text-sm font-medium text-gray-700 focus:ring-0 cursor-pointer outline-none">
+                    <option value="-33.482,-70.563">Peñalolén, Santiago</option>
+                    <option value="-33.456,-70.601">Ñuñoa, Santiago</option>
+                    <option value="-33.418,-70.605">Providencia, Santiago</option>
+                    <option value="-33.437,-70.650">Santiago Centro</option>
+                </select>
+                <button onclick="requestGeolocation()" class="ml-3 text-primary hover:text-secondary transition" title="Usar mi ubicación actual">
+                    <i class="fa-solid fa-crosshairs"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Location Button -->
+            <button onclick="requestGeolocation()" class="md:hidden text-primary text-xl">
+                <i class="fa-solid fa-location-dot"></i>
+            </button>
+            <div class="flex items-center gap-2">
+                <span id="current-user" class="hidden sm:inline text-xs text-gray-500"></span>
+                <button id="analytics-button" type="button" class="rounded-lg bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-100" title="Ver mis informes">
+                    <i class="fa-solid fa-chart-line mr-1" aria-hidden="true"></i><span class="hidden sm:inline">Informes</span>
+                </button>
+                <button id="dark-mode-button" type="button" class="rounded-lg bg-gray-100 px-3 py-2 text-sm text-gray-700 transition hover:bg-gray-200" aria-label="Activar modo oscuro" title="Cambiar tema">
+                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                </button>
+                <button id="logout-button" type="button" class="rounded-lg bg-gray-100 px-3 py-2 text-sm font-semibold text-gray-700 transition hover:bg-gray-200">
+                    <i class="fa-solid fa-right-from-bracket mr-1" aria-hidden="true"></i>Salir
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Layout -->
+    <main id="main-layout" class="flex-1 flex flex-col md:flex-row overflow-hidden max-w-7xl mx-auto w-full">
+        
+        <!-- Left Panel: Search & Results -->
+        <div id="list-panel" class="w-full md:w-5/12 lg:w-1/3 flex flex-col h-full border-r border-gray-200 bg-white shadow-[4px_0_15px_-3px_rgba(0,0,0,0.05)] z-10 relative">
+            
+            <!-- Search Bar Area -->
+            <div class="p-5 border-b border-gray-100 bg-white">
+                <div class="relative">
+                    <input type="text" id="search-input" placeholder="Ej: Leche, Pan, Bebida..." class="w-full pl-11 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all shadow-inner text-gray-700">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-3.5 text-gray-400 text-lg"></i>
+                </div>
+                <button id="import-product-list" type="button" class="import-list-button mt-3">
+                    <i class="fa-solid fa-file-arrow-up" aria-hidden="true"></i>
+                    Importar lista Excel
+                </button>
+                <input id="product-list-file" type="file" accept=".xlsx" class="sr-only">
+                <p id="product-list-file-name" class="mt-2 text-xs text-gray-500" aria-live="polite"></p>
+                <p id="list-upload-message" class="mt-2 hidden text-sm" role="status" aria-live="polite"></p>
+            </div>
+
+            <!-- Scrollable Results Area -->
+            <div class="flex-1 overflow-y-auto p-5" id="results-container">
+                <section class="mb-6 rounded-xl border border-gray-200 bg-gray-50 p-4">
+                    <h2 class="text-sm font-semibold text-gray-800">
+                        <i class="fa-solid fa-basket-shopping mr-2 text-primary" aria-hidden="true"></i>Compara tu lista de compras
+                    </h2>
+                    <p class="mt-2 text-xs text-gray-500">Importa un Excel (.xlsx) con columnas <strong>Producto</strong> y <strong>Cantidad</strong> (la columna <strong>Marca</strong> es opcional). El cálculo se realiza en este navegador.</p>
+                    <div id="list-results" class="mt-4 hidden space-y-3"></div>
+                </section>
+
+                <section id="analytics-panel" class="mb-6 hidden rounded-xl border border-gray-200 bg-white p-4">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-base font-bold text-gray-900"><i class="fa-solid fa-chart-pie mr-2 text-primary"></i>Mis informes</h2>
+                        <button id="close-analytics" type="button" class="rounded p-1 text-gray-500 hover:bg-gray-100" aria-label="Cerrar informes"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <label class="mt-4 block text-xs font-medium text-gray-600">Tendencia de precios (90 días)
+                        <select id="history-product" class="mt-1 w-full rounded-lg border border-gray-200 bg-white p-2 text-sm"></select>
+                    </label>
+                    <label class="mt-2 block text-xs text-gray-600">Ventana del gráfico
+                        <select id="history-range" class="mt-1 w-full rounded-lg border border-gray-200 bg-white p-2 text-sm">
+                            <option value="90">90 días</option>
+                            <option value="30">30 días</option>
+                        </select>
+                    </label>
+                    <div class="mt-2 h-52"><canvas id="price-history-chart" aria-label="Gráfico histórico de precios"></canvas></div>
+                    <div id="price-alerts" class="mt-2 space-y-1" aria-live="polite"></div>
+                    <p id="history-notice" class="mt-2 text-xs text-gray-500"></p>
+                    <div class="mt-4">
+                        <h3 class="text-sm font-semibold text-gray-800">Variación por categoría en tu zona</h3>
+                        <p class="mt-1 text-[11px] text-gray-500">Aproximación con tiendas en un radio de ~5 km; puede no coincidir con los límites oficiales de la comuna.</p>
+                        <div id="category-inflation" class="mt-2 space-y-2"></div>
+                    </div>
+                    <div id="admin-analytics" class="mt-5 hidden border-t border-gray-200 pt-4">
+                        <h3 class="text-sm font-bold text-gray-900">Panel B2B · últimos 30 días</h3>
+                        <p class="mt-1 text-xs text-gray-500">Búsquedas agregadas a celdas geográficas aproximadas; no son demanda de mercado total.</p>
+                        <button id="show-heatmap" type="button" class="mt-2 rounded-lg bg-slate-800 px-3 py-2 text-xs font-semibold text-white">Mostrar mapa de demanda</button>
+                        <div id="competitiveness-report" class="mt-3 max-h-48 overflow-y-auto text-xs"></div>
+                        <div class="mt-3 flex gap-2">
+                            <button id="export-xlsx" type="button" class="rounded-lg bg-emerald-600 px-3 py-2 text-xs font-semibold text-white">Exportar Excel</button>
+                            <button id="export-pdf" type="button" class="rounded-lg bg-slate-700 px-3 py-2 text-xs font-semibold text-white">Exportar PDF</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Initial State (Categories/Suggestions) -->
+                <div id="initial-state" class="animate-fade-in">
+                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Productos Populares</h3>
+                    <div id="loading-skeleton" class="grid grid-cols-2 gap-3" aria-label="Cargando catálogo">
+                        <div class="skeleton-card"></div><div class="skeleton-card"></div>
+                        <div class="skeleton-card"></div><div class="skeleton-card"></div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3" id="popular-products">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <p id="search-message" class="hidden text-sm text-gray-500 text-center py-6" role="status" aria-live="polite"></p>
+
+                <!-- Product Comparison State -->
+                <div id="comparison-state" class="hidden">
+                    <button onclick="resetView()" class="text-sm text-gray-500 hover:text-primary mb-4 flex items-center gap-1 transition">
+                        <i class="fa-solid fa-arrow-left"></i> Volver a búsqueda
+                    </button>
+                    
+                    <!-- Selected Product Header -->
+                    <div id="selected-product-header" class="mb-6 flex items-center gap-4 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Precios en tu zona</h3>
+                    
+                    <!-- Stores List -->
+                    <div id="stores-list" class="space-y-4 pb-10">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel: Map -->
+        <div id="map-panel" class="hidden w-full md:block md:w-7/12 lg:w-2/3 h-full relative bg-gray-100">
+            <div id="map" class="w-full h-full"></div>
+            
+            <!-- Map Overlay UI (Optional context) -->
+            <div class="absolute top-4 right-4 z-[400] bg-white/90 backdrop-blur px-4 py-2 rounded-lg shadow-sm border border-gray-200 text-sm font-medium text-gray-700 flex items-center gap-2">
+                <i class="fa-solid fa-map-location-dot text-primary"></i> <span id="map-status">Buscando tiendas...</span>
+            </div>
+        </div>
+
+    </main>
+    <button id="mobile-view-toggle" type="button" class="mobile-view-toggle md:hidden" aria-label="Cambiar a vista de mapa">
+        <i class="fa-solid fa-map mr-2" aria-hidden="true"></i>Ver mapa
+    </button>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.3/jspdf.plugin.autotable.min.js"></script>
+    <script src="./scripts/basemaps-config.js"></script>
+    
+    <script src="./scripts/superahorro.js"></script>
+    <script src="./scripts/advanced.js"></script>
+</body>
+</html>
